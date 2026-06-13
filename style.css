@@ -352,6 +352,9 @@ footer {
 /* ==========================================
    9. REQUISITO RÚBRICA: MENÚ HAMBURGUESA
    ========================================== */
+header label { 
+    display: none; 
+}
 @media(max-width: 768px) {
     header label { display: block; }
     .navbar {
