@@ -1,7 +1,7 @@
 /* ==========================================
    1. RESETEO Y CONFIGURACIÓN BASE
    ========================================== */
-   * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -66,10 +66,11 @@ header .logo h1 {
     display: none;
 }
 
+/* Escondido por defecto en computadoras */
 header label {
     font-size: 1.6rem;
     cursor: pointer;
-    display: none;
+    display: none !important;
 }
 
 /* ==========================================
@@ -158,7 +159,7 @@ header label {
     background: #ffffff;
     padding: 1.5rem;
     border-radius: 8px;
-    position: relative; /* Para acomodar el indicador de stock */
+    position: relative;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
@@ -170,7 +171,6 @@ header label {
     transform: translateY(-8px);
 }
 
-/* Indicadores de Stock Épicos */
 .badge {
     position: absolute;
     top: 10px;
@@ -210,7 +210,6 @@ header label {
     margin-bottom: 1.2rem;
 }
 
-/* Botoneras internas de la tarjeta */
 .acciones-producto {
     display: flex;
     gap: 0.5rem;
@@ -241,7 +240,6 @@ header label {
     transition: all 0.3s;
 }
 
-/* REQUISITO RÚBRICA: Hover para botones interactivos */
 .btn-comprar:hover, .btn-primary:hover { background-color: #d35400; }
 .btn-ws-ask:hover { background-color: #25d366; color: #fff; }
 
@@ -272,7 +270,6 @@ header label {
     transition: all 0.3s;
 }
 
-/* REQUISITO RÚBRICA: Hover y Focus en inputs, selects y textareas */
 .grupo-input input:hover, .grupo-input select:hover, .grupo-input textarea:hover,
 .grupo-input input:focus, .grupo-input select:focus, .grupo-input textarea:focus {
     border-color: #e67e22;
@@ -313,7 +310,6 @@ header label {
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     text-decoration: none;
     z-index: 1000;
-    /* REQUISITO RÚBRICA: Animación obligatoria */
     animation: pulsoEfecto 2s infinite;
 }
 
@@ -350,16 +346,12 @@ footer {
 .redes a:hover { color: #e67e22; }
 
 /* ==========================================
-   9. REQUISITO RÚBRICA: MENÚ HAMBURGUESA
+   9. MEDIA QUERY (MENÚ HAMBURGUESA CELULARES)
    ========================================== */
-/* 1. AGREGÁ ESTO ACÁ ARRIBA (Afuera del @media) */
-header label { 
-    display: none; 
-}
-
-/* 2. TU CÓDIGO ACTUAL SE QUEDA IGUAL ACÁ ABAJO */
 @media(max-width: 768px) {
-    header label { display: block; }
+    header label { 
+        display: block !important; 
+    }
     .navbar {
         position: absolute;
         top: 100%; left: 0; width: 100%;
