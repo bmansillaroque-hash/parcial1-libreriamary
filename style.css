@@ -22,7 +22,7 @@ main {
 }
 
 /* ==========================================
-          HEADER (NAVEGACIÓN)
+          HEADER LA PARTE DE NAVEGACIOM
    ========================================== */
 header {
     background-color: #2c3e50; /* Azul noche elegante */
@@ -54,7 +54,7 @@ header .logo h1 {
     transition: all 0.3s ease;
 }
 
-/* REQUISITO RÚBRICA: Efectos :hover para enlaces <a> */
+/* REQUISITO RÚBRICA (Efectos hover para enlaces <a>) */
 .navbar ul li a:hover, 
 .navbar ul li a.active {
     background-color: #34495e;
@@ -78,13 +78,13 @@ header label, .fa-bars {
              SECCIÓN HERO
    ========================================== */
 .hero {
-    background: #2c3e50; /* Forzamos un fondo azul sólido prolijo */
+    background: #2c3e50; /* fondo azul*/
     color: #ffffff;
     text-align: center;
     padding: 3rem 1.5rem;
     border-radius: 12px;
     margin: 2rem auto 3rem auto; /* Centra el recuadro gris en la pantalla */
-    max-width: 90%; /* Evita que se estire feo para la izquierda */
+    max-width: 90%; /* Evita que se estire Y quede feo para la izquierda */
 }
 
 .hero h2 {
