@@ -66,11 +66,12 @@ header .logo h1 {
     display: none;
 }
 
-/* Escondido por defecto en computadoras */
-header label {
+/* Escondido en compu */
+header label, .fa-bars {
     font-size: 1.6rem;
     cursor: pointer;
     display: none !important;
+}
 }
 
 /* ==========================================
