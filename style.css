@@ -190,8 +190,10 @@ header label, .fa-bars {
 .stock-bajo { background-color: #c0392b; }
 
 .tarjeta-producto img {
-    max-width: 100%;
-    height: auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
     margin: 1rem auto;
     border-radius: 4px;
 }
