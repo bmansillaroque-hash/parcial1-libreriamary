@@ -78,17 +78,19 @@ header label, .fa-bars {
    3. SECCIÓN HERO (MÉTRICA DE ALCANCE)
    ========================================== */
 .hero {
-    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+    background: #2c3e50; /* Forzamos un fondo azul sólido prolijo */
     color: #ffffff;
     text-align: center;
-    padding: 5.5rem 1.5rem;
+    padding: 3rem 1.5rem;
     border-radius: 12px;
-    margin-bottom: 3rem;
+    margin: 2rem auto 3rem auto; /* Centra el recuadro gris en la pantalla */
+    max-width: 90%; /* Evita que se estire feo para la izquierda */
 }
 
 .hero h2 {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     margin-bottom: 1.2rem;
+    color: #ffffff;
 }
 
 .hero p {
@@ -97,8 +99,9 @@ header label, .fa-bars {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    color: #ecf0f1;
+    color: #ffffff !important; /* Letras blancas para que se lean perfecto */
 }
+   
 
 /* ==========================================
    4. SECCIÓN ÉPICA DE LOS 3 RUBROS (INDEX)
