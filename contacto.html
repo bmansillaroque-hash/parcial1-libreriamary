@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Belén Mansilla">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librería Mary - Hacete Cliente</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>📚✂️ Librería Mary</h1>
+        </div>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar" class="fa-solid fa-bars"></label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos y Stock</a></li>
+                <li><a href="contacto.html" class="active">Hacete Cliente / Pedidos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="formulario-seccion">
+            <h2>Regístrate como Cliente VIP y hace tu pedido</h2>
+            <p class="Form-desc">Formar parte de nuestra comunidad te da un 10% de descuento en mercería y alertas de stock en papelería escolar.</p>
+            
+            <form action="#" method="POST" class="form-pedido">
+                
+                <div class="grupo-input">
+                    <label for="nombre">Nombre y Apellido completo:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Belén Mansilla">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required placeholder="nombre@correo.com">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="telefono">WhatsApp / Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="Ej: 261555555">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="entrega">Método de Entrega del Pedido:</label>
+                    <select id="entrega" name="entrega" required>
+                        <option value="">-- Seleccioná una opción --</option>
+                        <option value="retiro">Retiro en Local Mary (Sin Cargo)</option>
+                        <option value="envio">Envío a Domicilio (Consultar costo de zona)</option>
+                    </select>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="mensaje">¿Qué artículos querés encargar hoy? (Librería, Papelería o Mercería):</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Detallá marcas, colores de lanas o tipos de hojas..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Registrarme y Enviar Pedido</button>
+            </form>
+        </section>
+    </main>
+
+    <a href="https://wa.me/549261XXXXXXX?text=Hola%20Mary!%20Tengo%20una%20duda%20con%20el%20formulario%20de%20inscripción" class="whatsapp-btn" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 - Diseñado por Belén Mansilla. Todos los derechos reservados.</p>
+            <div class="redes">
+                <a href="https://instagram.com/tu_usuario_ficticio" target="_blank"><i class="fa-brands fa-instagram"></i> @LibreriaMary</a>
+                <a href="https://github.com/bmansillaroque-hash" target="_blank"><i class="fa-brands fa-github"></i> bmansillaroque-hash</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

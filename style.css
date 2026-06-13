@@ -1,0 +1,369 @@
+/* ==========================================
+   1. RESETEO Y CONFIGURACIÓN BASE
+   ========================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fbfbfa; /* Color hueso muy suave para lectura cómoda */
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding: 2.5rem 5%;
+}
+
+/* ==========================================
+   2. HEADER Y COMPORTAMIENTO NAVEGACIÓN
+   ========================================== */
+header {
+    background-color: #2c3e50; /* Azul noche elegante */
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header .logo h1 {
+    font-size: 1.5rem;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* REQUISITO RÚBRICA: Efectos :hover para enlaces <a> */
+.navbar ul li a:hover, 
+.navbar ul li a.active {
+    background-color: #34495e;
+    border-radius: 4px;
+    color: #e67e22; /* Detalle naranja vibrante */
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* ==========================================
+   3. SECCIÓN HERO (MÉTRICA DE ALCANCE)
+   ========================================== */
+.hero {
+    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 5.5rem 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+}
+
+.hero h2 {
+    font-size: 2.6rem;
+    margin-bottom: 1.2rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ecf0f1;
+}
+
+/* ==========================================
+   4. SECCIÓN ÉPICA DE LOS 3 RUBROS (INDEX)
+   ========================================== */
+.rubros-container h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.grid-rubros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.tarjeta-rubro {
+    background: #ffffff;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    border-top: 4px solid #e67e22;
+}
+
+.tarjeta-rubro i {
+    font-size: 2.5rem;
+    color: #e67e22;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-rubro h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+/* ==========================================
+   5. CATÁLOGO CON BADGES DE STOCK (PRODUCTOS)
+   ========================================== */
+.productos-seccion h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 2.5rem;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+}
+
+.tarjeta-producto {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    position: relative; /* Para acomodar el indicador de stock */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-8px);
+}
+
+/* Indicadores de Stock Épicos */
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.stock-alto { background-color: #27ae60; }
+.stock-bajo { background-color: #c0392b; }
+
+.tarjeta-producto img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 4px;
+}
+
+.tarjeta-producto h4 {
+    font-size: 1.15rem;
+    margin-bottom: 0.3rem;
+}
+
+.tarjeta-producto .categoria {
+    font-size: 0.85rem;
+    color: #95a5a6;
+    margin-bottom: 0.8rem;
+}
+
+.tarjeta-producto .precio {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1.2rem;
+}
+
+/* Botoneras internas de la tarjeta */
+.acciones-producto {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-comprar, .btn-primary {
+    flex: 1;
+    background-color: #e67e22;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.6rem;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-ws-ask {
+    flex: 1;
+    background-color: #fff;
+    color: #25d366;
+    border: 1px solid #25d366;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.6rem;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+/* REQUISITO RÚBRICA: Hover para botones interactivos */
+.btn-comprar:hover, .btn-primary:hover { background-color: #d35400; }
+.btn-ws-ask:hover { background-color: #25d366; color: #fff; }
+
+/* ==========================================
+   6. FORMULARIO E INPUT HOVERS
+   ========================================== */
+.form-pedido {
+    background: #ffffff;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.formulario-seccion h2 { text-align: center; margin-bottom: 0.5rem; }
+.Form-desc { text-align: center; color: #7f8c8d; margin-bottom: 2rem; }
+
+.grupo-input { margin-bottom: 1.2rem; }
+.grupo-input label { display: block; margin-bottom: 0.4rem; font-weight: 600; font-size: 0.9rem; }
+
+.grupo-input input, .grupo-input select, .grupo-input textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+/* REQUISITO RÚBRICA: Hover y Focus en inputs, selects y textareas */
+.grupo-input input:hover, .grupo-input select:hover, .grupo-input textarea:hover,
+.grupo-input input:focus, .grupo-input select:focus, .grupo-input textarea:focus {
+    border-color: #e67e22;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(230, 126, 34, 0.2);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #e67e22;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn-submit:hover { background-color: #d35400; }
+
+/* ==========================================
+   7. WHATSAPP BOTÓN FLOTANTE CON ANIMACIÓN
+   ========================================== */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    text-decoration: none;
+    z-index: 1000;
+    /* REQUISITO RÚBRICA: Animación obligatoria */
+    animation: pulsoEfecto 2s infinite;
+}
+
+@keyframes pulsoEfecto {
+    0% { transform: scale(1); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    50% { transform: scale(1.08); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5); }
+    100% { transform: scale(1); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+}
+
+/* ==========================================
+   8. FOOTER RESPONSIVO Y REDES
+   ========================================== */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1.5rem 5%;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.redes a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    transition: color 0.3s;
+}
+.redes a:hover { color: #e67e22; }
+
+/* ==========================================
+   9. REQUISITO RÚBRICA: MENÚ HAMBURGUESA
+   ========================================== */
+@media(max-width: 768px) {
+    header label { display: block; }
+    .navbar {
+        position: absolute;
+        top: 100%; left: 0; width: 100%;
+        background-color: #2c3e50;
+        border-top: 1px solid #34495e;
+        display: none;
+    }
+    .navbar ul { flex-direction: column; }
+    .navbar ul li a { display: block; padding: 1.2rem; text-align: center; border-bottom: 1px solid #34495e; }
+    #menu-bar:checked ~ .navbar { display: block; }
+    .footer-content { flex-direction: column; text-align: center; }
+    .redes a { margin: 0 0.8rem; }
+}

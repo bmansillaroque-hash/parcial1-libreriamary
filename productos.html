@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Belén Mansilla">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librería Mary - Catálogo y Stock</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>📚✂️ Librería Mary</h1>
+        </div>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar" class="fa-solid fa-bars"></label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html" class="active">Productos y Stock</a></li>
+                <li><a href="contacto.html">Hacete Cliente / Pedidos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="productos-seccion">
+            <h2>Catálogo con Control de Stock</h2>
+            <p class="subtitulo">Consultá disponibilidad en tiempo real. Hacé clic en comprar para coordinar tu entrega (con o sin envío).</p>
+            
+            <div class="grid-productos">
+                
+                <div class="tarjeta-producto">
+                    <span class="badge stock-alto">Stock Disponible</span>
+                    <img src="https://via.placeholder.com/150x180" alt="Caja de lápices">
+                    <h4>Lápices de Colores x24</h4>
+                    <p class="categoria">Librería Escolar</p>
+                    <p class="precio">$4.500</p>
+                    <div class="acciones-producto">
+                        <a href="contacto.html" class="btn-comprar">Comprar</a>
+                        <a href="https://wa.me/549261XXXXXXX?text=Hola%20Mary,%20¿tenés%20stock%20de%20los%20Lápices%20x24?" target="_blank" class="btn-ws-ask"><i class="fa-brands fa-whatsapp"></i> Preguntar</a>
+                    </div>
+                </div>
+
+                <div class="tarjeta-producto">
+                    <span class="badge stock-bajo">Últimas 3 unidades</span>
+                    <img src="https://via.placeholder.com/150x180" alt="Resma A4">
+                    <h4>Resma Hojas A4 75gr</h4>
+                    <p class="categoria">Papelería Comercial</p>
+                    <p class="precio">$8.900</p>
+                    <div class="acciones-producto">
+                        <a href="contacto.html" class="btn-comprar">Comprar</a>
+                        <a href="https://wa.me/549261XXXXXXX?text=Hola%20Mary,%20¿te%20quedan%20Resmas%20A4?" target="_blank" class="btn-ws-ask"><i class="fa-brands fa-whatsapp"></i> Preguntar</a>
+                    </div>
+                </div>
+
+                <div class="tarjeta-producto">
+                    <span class="badge stock-alto">Stock Disponible</span>
+                    <img src="https://via.placeholder.com/150x180" alt="Lana">
+                    <h4>Lana Semigruesa 100g</h4>
+                    <p class="categoria">Mercería / Tejido</p>
+                    <p class="precio">$2.800</p>
+                    <div class="acciones-producto">
+                        <a href="contacto.html" class="btn-comprar">Comprar</a>
+                        <a href="https://wa.me/549261XXXXXXX?text=Hola%20Mary,%20¿tenés%20otros%20colores%20de%20la%20lana%20semigruesa?" target="_blank" class="btn-ws-ask"><i class="fa-brands fa-whatsapp"></i> Preguntar</a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <a href="https://wa.me/549261XXXXXXX?text=Hola%20Librería%20Mary!%20Tengo%20una%20consulta" class="whatsapp-btn" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 - Diseñado por Belén Mansilla. Todos los derechos reservados.</p>
+            <div class="redes">
+                <a href="https://instagram.com/tu_usuario_ficticio" target="_blank"><i class="fa-brands fa-instagram"></i> @LibreriaMary</a>
+                <a href="https://github.com/bmansillaroque-hash" target="_blank"><i class="fa-brands fa-github"></i> bmansillaroque-hash</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
